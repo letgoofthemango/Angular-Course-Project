@@ -1,0 +1,74 @@
+ul {
+    list-style: none;
+}
+
+ul li:before {
+    content: '✓';
+    margin-right: 0.25rem;
+}
+
+img {
+    height: 12rem;
+    object-fit: cover;
+}
+
+.offersection {
+    background-color: #340F6F;
+}
+
+h1 {
+    color: white;
+}
+
+
+/* Transitions */
+
+.card {
+    transition: all 0.25s;
+}
+
+.card:hover {
+    transform: scale(1.025);
+}
+
+h5 {
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.card {
+    height: 35rem;
+}
+
+.heading {
+    height: 5rem;
+}
+
+.btn {
+    width: 45%;
+    margin: 0 auto;
+}
+
+ul {
+    height: 10rem;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    h5 {
+        margin-top: 0.3rem;
+        font-size: 0.8rem;
+    }
+    .card {
+        height: 41rem;
+    }
+    .heading {
+        height: 5rem;
+    }
+    .btn {
+        width: 45%;
+        margin: 0 auto;
+    }
+    ul {
+        height: 13rem;
+    }
+}

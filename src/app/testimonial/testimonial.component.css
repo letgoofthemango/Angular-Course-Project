@@ -1,0 +1,58 @@
+.setting {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.alignment {
+	text-align: right;
+	left: 50%;
+}
+
+.backImage {
+	background-image: url('/assets/bggradient4.jpg');
+	background-size: cover;
+	height: 100vh;
+}
+
+.blueish {
+	background-image: url('/assets/bggradient3.jpg');
+	background-size: cover;
+}
+
+.thickLine {
+	border: 3px solid white;
+}
+
+.bubble {
+	position: absolute;
+	width: 15%;
+	bottom: 30px;
+	z-index: 1;
+}
+
+@media only screen and (max-width: 780px) {
+
+
+	.setting {
+		padding-top: 10vh;
+	}
+
+	.alignment {
+		text-align: center;
+		left: 15%;
+		top: 30vh;
+		padding-top: 5vh;
+	}
+
+	#mobileImg1 {
+		content:url("/assets/profile_mobile.png")
+	}
+
+	#mobileImg2 {
+		content:url("/assets/profile_mobile2.png")
+	}
+
+	#mobileImg3 {
+		content:url("/assets/profile_mobile3.png")
+	}
+}

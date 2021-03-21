@@ -1,0 +1,62 @@
+.cartsection {
+    background-color: #340F6F;
+}
+
+.card {
+    margin-top: 9.5rem;
+    margin-bottom: 6.2rem;
+}
+
+.card input {
+    margin-bottom: 1rem;
+}
+
+
+/* .firstHr {
+    border: 0.25rem solid orange;
+    width: 23%;
+    margin-left: 0;
+} */
+
+.secondHr {
+    border: 0.25rem solid #007BFF;
+    width: 33.33%;
+    margin-left: 0;
+}
+
+.thirdHr {
+    border: 0.25rem solid rgb(101, 238, 209);
+    width: 66.66%;
+    margin-left: 0;
+}
+
+.fourthHr {
+    border: 0.25rem solid #E70A47;
+    width: 99.99%;
+    margin-left: 0;
+}
+
+.alignleft {
+    float: left;
+    width: 50%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.alignright {
+    float: left;
+    width: 50%;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+}
+
+.clear {
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    width: 5rem;
+}

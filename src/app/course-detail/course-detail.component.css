@@ -1,0 +1,10 @@
+img {
+	max-height: 30vh;
+	object-fit: scale-down;
+}
+
+.jumbotron {
+	background: rgba(52, 15, 111, 0.8);
+	color: white;
+	box-shadow: 2px 2px 18px #8D3C99;
+}

@@ -1,0 +1,144 @@
+<div class="cartsection">
+    <div class="container">
+        <div class="row">
+            <div class="card col-10 col-sm-10 col-md-8 col-lg-6 mx-auto">
+                <div class="card-body">
+                    <h5 class="card-title">Checkout:</h5>
+                    <div class="cart-item" *ngFor="let item of items">
+                        <p class="alignleft">{{ item.name }}</p>
+                        <p class="alignright">{{ item.price | currency:"EUR" }}</p>
+                        <div class="clear" style="clear: both;"></div>
+                        <hr>
+                    </div>
+                    <p *ngIf="items.length===0">No courses in cart yet!</p>
+                    <div class="text-box">
+                        <p class="alignleft">Total</p>
+                        <p class="alignright">{{ courseSumOriginal | currency:"EUR" }}</p>
+                        <div class="clear" style="clear: both;"></div>
+                        <hr class="secondHr">
+                    </div>
+                    <ng-container *ngIf="voucherPercent == 10; else second">
+                        <p>10% Discount applied</p>
+                        <hr class="thirdHr">
+                        <p class="alignleft">New Total</p>
+                        <p class="alignright">{{ courseSum | currency:"EUR" }}</p>
+                        <div class="clear" style="clear: both;"></div>
+                        <hr class="fourthHr">
+                    </ng-container>
+                    <ng-template #second>
+                        <ng-container *ngIf="voucherPercent == 20; else third">
+                            <p>20% Discount applied</p>
+                            <hr class="thirdHr">
+                            <p class="alignleft">New Total</p>
+                            <p class="alignright">{{ courseSum | currency:"EUR" }}</p>
+                            <div class="clear" style="clear: both;"></div>
+                            <hr class="fourthHr">
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #third>
+                        <ng-container *ngIf="voucherPercent == 30; else fourth">
+                            <p>30% Discount applied</p>
+                            <hr class="thirdHr">
+                            <p class="alignleft">New Total</p>
+                            <p class="alignright">{{ courseSum | currency:"EUR" }}</p>
+                            <div class="clear" style="clear: both;"></div>
+                            <hr class="fourthHr">
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #fourth>
+                        <ng-container *ngIf="voucherPercent == 40">
+                            <p>40% Discount applied</p>
+                            <hr class="thirdHr">
+                            <p class="alignleft">New Total</p>
+                            <p class="alignright">{{ courseSum | currency:"EUR" }}</p>
+                            <div class="clear" style="clear: both;"></div>
+                            <hr class="fourthHr">
+                        </ng-container>
+                    </ng-template>
+                    <form [formGroup]="voucherForm" (ngSubmit)="onVoucherSubmit(voucherForm.value)">
+                        <div class="row">
+                            <label class="col-4" for="name">
+                                Voucher: 
+                            </label>
+                            <input class="col-7 ml-auto mr-2" id="voucher" type="text" formControlName="voucher">
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-primary my-2 my-sm-0 mx-auto " type="submit">Redeem</button>
+                        </div>
+                    </form>
+
+                    <h5>Billing Address:</h5>
+                    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+                        <div class="row">
+                            <label class="col-4" for="firstName">
+                                First Name: 
+                            </label>
+                            <input class="col-7 ml-auto mr-2" id="firstName" type="text" formControlName="firstName">
+                        </div>
+                        <div *ngIf="checkoutForm.controls['firstName'].invalid && (checkoutForm.controls['firstName'].dirty || checkoutForm.controls['firstName'].touched)" class="alert alert-danger">
+                            <div *ngIf="checkoutForm.controls['firstName'].errors.required">
+                                First name is required.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-4" for="lastName">
+                                Last Name: 
+                            </label>
+                            <input class="col-7 ml-auto mr-2" id="lastName" type="text" formControlName="lastName">
+                        </div>
+                        <div *ngIf="checkoutForm.controls['lastName'].invalid && (checkoutForm.controls['lastName'].dirty || checkoutForm.controls['lastName'].touched)" class="alert alert-danger">
+                            <div *ngIf="checkoutForm.controls['lastName'].errors.required">
+                                Last name is required.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-4" for="age">
+                                Age: 
+                            </label>
+                            <input class="col-7 ml-auto mr-2" id="age" type="text" formControlName="age">
+                        </div>
+                        <div *ngIf="checkoutForm.controls['age'].invalid && (checkoutForm.controls['age'].dirty || checkoutForm.controls['age'].touched)" class="alert alert-danger">
+                            <div *ngIf="checkoutForm.controls['age'].errors.required">
+                                Age is required.
+                            </div>
+                            <div *ngIf="checkoutForm.controls['age'].hasError('maxlength')">
+                                You can't be older than 99.
+                            </div>
+                            <div *ngIf="checkoutForm.controls['age'].errors.pattern">
+                                You can't enter letters.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-4" for="email">
+                               E-Mail: 
+                            </label>
+                            <input class="col-7 ml-auto mr-2" id="email" type="text" formControlName="email">
+                        </div>
+                        <div *ngIf="checkoutForm.controls['email'].invalid && (checkoutForm.controls['email'].dirty || checkoutForm.controls['email'].touched)" class="alert alert-danger">
+                            <div *ngIf="checkoutForm.controls['email'].errors.required">
+                                E-Mail is required.
+                            </div>
+                            <div *ngIf="checkoutForm.controls['email'].errors.email">
+                                E-Mail must contain an @-symbol.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-4" for="address">
+                        Address: 
+                        </label>
+                            <input class="col-7 ml-auto mr-2" id="address" type="text" formControlName="address">
+                        </div>
+                        <div *ngIf="checkoutForm.controls['address'].invalid && (checkoutForm.controls['address'].dirty || checkoutForm.controls['address'].touched)" class="alert alert-danger">
+                            <div *ngIf="checkoutForm.controls['address'].errors.required">
+                                Address is required.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-primary my-2 my-sm-0 mx-auto " type="submit">Purchase</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

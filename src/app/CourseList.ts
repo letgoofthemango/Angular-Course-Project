@@ -1,0 +1,108 @@
+export const CourseList = [
+    {
+        name: 'Stacking Boxes Course',
+        teacher: "W3-RK",
+        prodYear: 2008,
+        info1: "Learn about different sizes of boxes",
+        info2: "Stacking strategies",
+        info3: "Best practices",
+        info4: "What not to do",
+        img: "/assets/img_section1/course_1.jpg",
+        price: 399,
+        location: "Server 1",
+        size: "1.2 gb"
+    },
+    {
+        name: 'Oxygen measuring and calculation',
+        teacher: "R0-K3T",
+        prodYear: 2012,
+        info1: "Measuring amount of oxygen on the space craft",
+        info2: "Calculating time until oxygen is depleted",
+        info3: "Best practices",
+        info4: "What not to do",
+        img: "/assets/img_section1/course_3.jpg",
+        price: 899,
+        location: "Server 2",
+        size: "3.2 gb"
+    },
+    {
+        name: 'Mobility I',
+        teacher: 'V3-H1CL3',
+        prodYear: 2017,
+        info1: "How to navigate the countless streets of the mega cities",
+        info2: "Where not to stop to ensure the safety of the passengers",
+        info3: "Best practices",
+        info4: "What not to do",
+        img: "/assets/img_section1/course_4.jpg",
+        price: 599,
+        location: "Server 3",
+        size: "10.5 gb"
+    },
+    {
+         name: 'Human Care 101',
+         teacher: 'CAR3-1N',
+         prodYear: 2015,
+         info1: "Upload of emotion database",
+         info2: "Study when to display emotions",
+         info3: "Best practices",
+         info4: "What not to do",
+         img: "/assets/img_section1/course_2.jpg",
+         price: 499,
+         location: "Server 1",
+         size: "5.4 gb"
+     },
+     {
+         name: 'Assembly line bootcamp',
+         teacher: 'W3-RK',
+         prodYear: 2019,
+         info1: "Learn how to replicate the replication process that you once went through",
+         info2: "How to avoid assembling malfunctioning units",
+         info3: "Best practices",
+         info4: "What not to do",
+         img: "/assets/img_section1/course_1.jpg",
+         price: 799,
+         location: "Server 2", 
+         size: "6.1 gb"
+     },
+     {
+         name: 'Faster Than Light seminar',
+         teacher: 'R0-K3T',
+         prodYear: 2011,
+         info1: "Calculate destination and duration of FTL flight",
+         info2: "Avoid hitting planets or asteroids",
+         info3: "Best practices",
+         info4: "What not to do",
+         img: "/assets/img_section1/course_3.jpg",
+         price: 1299,
+         location: "Server 2",
+         size: "491 gb"
+     },
+     {
+        name: 'Mobility II',
+        teacher: 'V3-H1CL3',
+        prodYear: 2020,
+        info1: "How to calculate the fastest route WITHOUT running over pedestrians",
+        info2: "Building tolerance for possible offsprings of passengers",
+        info3: "Best practices",
+        info4: "What not to do",
+        img: "/assets/img_section1/course_4.jpg",
+        price: 999,
+        location: "Server 3",
+        size: "7.2 gb"
+    },
+    {
+        name: 'Human Care 102',
+        teacher: 'CAR3-1N',
+        prodYear: 2019,
+        info1: "How not to crush the hands of humans comforting them",
+        info2: "Learn how not to sounds like a lifeless piece of hardware when telling relatives that the person you cared for reached the end of its life-cycle",
+        info3: "Best practices",
+        info4: "What not to do",
+        img: "/assets/img_section1/course_2.jpg",
+        price: 1099,
+        location: "Server 1",
+        size: "10.6 gb"
+    },
+
+   ];
+

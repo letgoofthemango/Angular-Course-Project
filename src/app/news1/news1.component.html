@@ -1,0 +1,11 @@
+<div class="container mt-5 mb-5 pb-5">
+    <div *ngIf="news">
+        <img src="{{news.img}}" alt="" class="img-fluid rounded mt-5 animate__animated animate__fadeInDown">
+        <hr>
+        <div class="text animate__animated animate__fadeInUp">
+            <h4 class="title mt-5 pt-5">{{ news.title }}</h4>
+            <p [innerHTML]="news.desc" class="description mt-5 text-justify"></p>
+            <hr>
+        </div>
+    </div>
+</div>

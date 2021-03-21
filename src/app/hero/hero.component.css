@@ -1,0 +1,46 @@
+.top-box {
+    background-image: url("/assets/images/robotgradientintro2.jpg");
+    background-size: cover;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.circle-img {
+    width: 178px;
+    height: 178px;
+    margin-top: 89px;
+    background-size: cover;
+    margin-right: auto;
+    margin-bottom: initial;
+    margin-left: -27px;
+}
+
+.text-box {
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: 6rem;
+    color: #ffffff;
+    margin: -60px 0 0;
+}
+
+p {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .text-box {
+        width: 70%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.25rem;
+    }
+}

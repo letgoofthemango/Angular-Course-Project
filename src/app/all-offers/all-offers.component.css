@@ -1,0 +1,16 @@
+.card {
+    transition: all 0.25s;
+}
+
+.card:hover {
+    transform: scale(1.025);
+    box-shadow: 2px 2px 18px #652DB6;
+}
+
+
+@media screen and (max-width: 991px) {
+	img {
+		max-height: 12rem;
+		object-fit: cover;
+	}
+}

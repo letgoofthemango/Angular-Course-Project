@@ -1,0 +1,13 @@
+.offersection {
+    height: 30rem;
+}
+
+hr {
+    border: 0.5rem solid orange;
+    width: 35%;
+    margin-left: 0;
+}
+
+p {
+    width: 45%;
+}
